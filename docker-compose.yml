@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: "web"
+    volumes:
+      - ./web:/home/node/app
+    container_name: dockerizing-web
+    ports:
+      - 3000:3000
+    command: ["yarn", "start"]
