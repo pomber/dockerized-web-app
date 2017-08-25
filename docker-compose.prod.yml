@@ -1,8 +1,6 @@
-
 version: "3"
 
 # prod environment
-# this file extends docker-compose.yml
 # docker-compose -f docker-compose.prod.yml up --build
 
 services:
@@ -13,3 +11,8 @@ services:
       dockerfile: "prod.dockerfile"
     ports:
       - "8080:80"
+  api:
+    container_name: dockerizing-api
+    build:
+      context: "./api"
+      dockerfile: "prod.dockerfile"

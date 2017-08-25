@@ -13,7 +13,7 @@ export default class extends Component {
   };
 
   componentDidMount() {
-    fetch("cows")
+    fetch("cow-api/cow")
       .then(response => response.text())
       .then(cows => this.setState({ cows }));
   }

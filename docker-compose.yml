@@ -1,15 +1,14 @@
 version: "3"
 
 # dev environment
-# this file extends docker-compose.yml
 # docker-compose up
 
 services:
   web:
     container_name: dockerizing-web-dev
     build:
-      context: "./web"
-      dockerfile: "dev.dockerfile"
+      context: ./web
+      dockerfile: dev.dockerfile
     volumes:
       - ./web:/home/node/app
     ports:
@@ -23,4 +22,5 @@ services:
     working_dir: /home/node/app
     ports:
       - 3001:80
+      - 5858:5858
     command: ["yarn", "start"]

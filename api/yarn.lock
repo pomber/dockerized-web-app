@@ -217,6 +217,10 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
+cows@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/cows/-/cows-1.1.0.tgz#dd307bc99fd0c91b55e6f3a05406093dfa6add2b"
+
 cryptiles@2.x.x:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/cryptiles/-/cryptiles-2.0.5.tgz#3bdfecdc608147c1c67202fa291e7dca59eaa3b8"

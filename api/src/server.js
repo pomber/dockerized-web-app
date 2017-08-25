@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
+const cows = require("cows")();
 
-app.get("/cows", function(req, res) {
-  res.send("Hello Worlds!");
+app.get("/cow-api/cow", function(req, res) {
+  const index = Math.floor(Math.random() * cows.length);
+  res.send(cows[index]);
 });
 
 app.listen(80, function() {
-  console.log("Example app listening on port 80!");
+  console.log("cow-api listening on port 80");
 });
