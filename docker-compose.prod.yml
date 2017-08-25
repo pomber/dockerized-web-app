@@ -3,7 +3,7 @@ version: "3"
 
 # prod environment
 # this file extends docker-compose.yml
-# docker-compose -f docker-compose.prod.yml up -d
+# docker-compose -f docker-compose.prod.yml up --build
 
 services:
   web:
