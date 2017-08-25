@@ -1,9 +1,27 @@
 import React, { Component } from "react";
 
-class App extends Component {
+const style = {
+  position: "absolute",
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)"
+};
+
+export default class extends Component {
+  state = {
+    cows: null
+  };
+
+  componentDidMount() {
+    fetch("cows")
+      .then(response => response.text())
+      .then(cows => this.setState({ cows }));
+  }
+
   render() {
-    return <div>Welcome</div>;
+    const { cows } = this.state;
+    return cows
+      ? <pre style={style} children={cows} />
+      : <div style={style}>Loading cows...</div>;
   }
 }
-
-export default App;

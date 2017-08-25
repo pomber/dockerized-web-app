@@ -22,5 +22,5 @@ services:
       - ./api:/home/node/app
     working_dir: /home/node/app
     ports:
-      - 3001:3000
+      - 3001:80
     command: ["yarn", "start"]
